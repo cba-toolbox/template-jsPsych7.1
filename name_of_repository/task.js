@@ -1,16 +1,10 @@
 /* デモ用のストループ課題 */
-/* 挨拶 */
-var welcome = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: "<p><span style='font-size:20pt;'>実験にお越しいただき，ありがとうございます。</span></p>"+
-  "<p><span style='font-size:20pt;'>キーボードのキーをどれか押して，開始してください</span></p>"
-};
-
-/* 全画面化 */
+/* 全画面化とスタート */
 var fullscreen = {
   type: jsPsychFullscreen,
-  message: "<p><span style='font-size:20pt;'>これ以降は全画面表示で実験を行います。以下の「次に進む」を押して次へ進んでください。</span></p>",
-  button_label: "<p style='font-size:20px'>次に進む</p>",
+  message: "<p><span style='font-size:20pt;'>それでは課題をはじめます。</span></p>"+
+           "<p><span style='font-size:20pt;'>以下の「開始」を押すと，全画面になって課題がはじまります。</span></p>",
+  button_label: "<p style='font-size:20px'>開始</p>",
   fullscreen_mode: true,
 };
 
@@ -108,4 +102,4 @@ var debrief = {
 };
 
 /*タイムラインの設定*/
-var timeline = [welcome, fullscreen, instructions, stroop, debrief];
+var timeline = [fullscreen, instructions, stroop, debrief];
