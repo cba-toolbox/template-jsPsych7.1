@@ -1,6 +1,8 @@
 var jsPsych = initJsPsych({
-    on_finish: () => jatos.startNextComponent(jsPsych.data.get().json())
-  });
+  on_finish: function() {
+          jsPsych.data.get().localSave('csv', 'data.csv');
+  }
+});
 
 /* 全画面化とスタート */
 var fullscreen = {

@@ -1,5 +1,5 @@
 var jsPsych = initJsPsych({
-  on_finish: () => jatos.endStudy(jsPsych.data.get().json())
+  on_finish: () => jatos.startNextComponent(jsPsych.data.get().json())
 });
 
 /* 全画面化とスタート(Worker IDとtask_nameを追加)*/
